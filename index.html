@@ -10,10 +10,11 @@
 
     <title>Regalo App</title>
 
-    <meta property="og:title" content="Regalo App - Confira Manga Tommy - CEASA" />
     <meta property="og:url" content="http://regaloapp.com.br/product/22" />
-    <meta property="og:description" content="Cx 18kg manga tommy - CEAGESP por R$ 60,00" />
-    <meta property="og:image" content="https://regalo-app-product-images.s3.amazonaws.com/ad5060a5-f475-474c-b4a0-e8b8c414dbb3-thumbnail.jpg" />
+    <!-- <meta property="og:title" content="Regalo App - Confira Manga Tommy - CEASA" /> -->
+    <!-- <meta property="og:description" content="Cx 18kg manga tommy - CEAGESP por R$ 60,00" /> -->
+    <meta property="og:image"
+        content="https://regalo-app-product-images.s3.amazonaws.com/ad5060a5-f475-474c-b4a0-e8b8c414dbb3-thumbnail.jpg" />
 
     <style>
         * {
@@ -198,7 +199,7 @@
 
         <div style="margin-bottom: 5px;">
             <span style="font-size: 18px; font-weight: bold;">Anunciante</span>
-        </br>
+            </br>
             <span style="font-size: 14px;">Edipo Galante Pereira</span>
         </div>
     </div>
@@ -206,6 +207,8 @@
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
+
+        getData();
 
         function plusSlides(n) {
             showSlides(slideIndex += n);
@@ -234,6 +237,18 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
-    </script>
 
+        function getData() {
+            fetch('https://api-safe.regaloapp.com.br/public/products/22')
+                .then((response) => response.json())
+                .then((data) => populateHeader(data));
+        }
+
+        function populateHeader(data = {}) {
+            console.log(data);
+            document.head.innerHTML += `<meta property="og:title" content="Regalo App - ${data.title}" />`;
+            document.head.innerHTML += `<meta property="og:description" content="${data.description} por R$ ${data.price}" />`;
+        }
+    </script>
+</body>
 </html>
