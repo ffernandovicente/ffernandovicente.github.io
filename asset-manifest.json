@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.621dd119.css",
-    "main.js": "/static/js/main.5705b351.js",
+    "main.js": "/static/js/main.5d78d7aa.js",
     "static/media/login-image.jpg": "/static/media/login-image.21e8ba3f9dca3c346851.jpg",
     "static/media/fabio-mangione.jpg": "/static/media/fabio-mangione.488bc249dffdae3556c6.jpg",
     "static/media/uriel-soberanes.jpg": "/static/media/uriel-soberanes.b741f54e9ccbd071a751.jpg",
@@ -14,11 +14,12 @@
     "static/media/nucleo-icons.eot": "/static/media/nucleo-icons.bd42d77b9672555647d1.eot",
     "static/media/nucleo-icons.ttf": "/static/media/nucleo-icons.4466aeec3386b965a232.ttf",
     "static/media/nucleo-icons.woff": "/static/media/nucleo-icons.8e954b749f951b654fc6.woff",
+    "static/media/tribo-logo-texto.jpg": "/static/media/tribo-logo-texto.8d0ee54d4af553e95cc8.jpg",
     "static/media/nucleo-icons.woff2": "/static/media/nucleo-icons.ec16bc4cc4526801004d.woff2",
     "index.html": "/index.html"
   },
   "entrypoints": [
     "static/css/main.621dd119.css",
-    "static/js/main.5705b351.js"
+    "static/js/main.5d78d7aa.js"
   ]
 }
